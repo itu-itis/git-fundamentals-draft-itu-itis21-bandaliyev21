@@ -1,6 +1,3 @@
-*{
-    box-sizing:;
-}
 h1 {
     font-size: 24pt;
     color : red;
@@ -23,7 +20,7 @@ ul{
 }
 
 a:hover{
-    text_decoration: none;
+    text-decoration: none;
 }
 
 li:first-child{
