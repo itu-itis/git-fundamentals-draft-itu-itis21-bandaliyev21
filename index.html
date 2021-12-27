@@ -7,27 +7,40 @@
         </title>
         <link rel = "stylesheet" type = "text/css" href = "all.css" />
     </head>
-    <body>
+    <body onload="welcomeFunction(); document.body.style.backgroundColor = 'pink'"
+		  onresize="document.body.style.backgroundColor = 'lightblue'"
+
+		  onkeydown = "document.body.style.backgroundColor='white'"
+		  onkeyup = "document.body.style.backgroundColor= 'lightyellow'">
+
+          <script>
+            function welcomeFunction(){
+                              alert("Welcome!");
+            }
+      	  </script>
+		  
         <strong>Intro 2 Inf Sys</strong>
-        <p class = "centered">
+        <p class = "centered" onmouseover="document.querySelector('.centered').style.font='bold 20pt arial,serif'">
             <em>Kanan Bandaliyev
                 <br>
                 150210909
             </em>
         </p>
         <p>Evolution of Homo sapiens</p>
-        <ul>
+        <ul id="unorderedL" onmouseover="document.getElementById('unorderedL').style.backgroundColor='purple'">
             <li>Homo habilis (able man)</li>
             <li>Homo erectus (upright man)</li>
             <li>Homo neanderthalensis</li>
             <li>Homo floresiensis (hobbit)</li>
-            <li>Homo sapiens (wise man)</li>
-            <ul><li>
-                Homo sapiens sapiens
+			<li>Homo sapiens (wise man)</li>
+            <ul id="insideUL" onclick = "document.getElementById('insideUL').style.backgroundColor='orange'"><li>
+                Homio sapiens sapiens
             	</li>
             </ul>
         </ul>
-    <h1>
+    <h1 onmouseover = "style.color='orange';
+					   style.backgroundColor='lightgreen'"
+		onmouseout = "style.color='red'; style.backgroundColor='white'">
         <strong>Human Evolution</strong>
      </h1>
 	<p><img src="evolution-diagram.png"></p>
@@ -38,7 +51,10 @@
        <h2><strong>The clickable image</strong></h2>
 
     <p>
-        This image is a link, try it <a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens"><img src="evolution-diagram.png"></a>
+        This image is a link, try it 
+		<a href="https://www.biologyonline.com/dictionary/homo-sapiens-sapiens">
+			<img id="myImg" alt="Evolution diagram" onclick="alert(document.getElementById('myImg'))" src="evolution-diagram.png">
+		</a>
     </p>
 
     <table>
